@@ -20,8 +20,7 @@ Step 3: Clone the Repository
 Clone the Task Manager Golang repository from GitHub using the following command:
 
 ```shell
-git clone https://github.com/task-manager-golang/
-task-manager-golang.git
+https://github.com/mohanrajnambe/task-manager-golang.git
 cd task-manager-golang
 ```
 
