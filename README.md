@@ -2,6 +2,11 @@
 
 RESTful API service built in Go that provides task management capabilities.
 
+# Prerequisites
+
+- Go 1.23.3+
+- PostgreSQL 16
+
 Installation Guide
 To install Task Manager Golang, follow these steps:
 
@@ -37,10 +42,10 @@ Step 6: Initialise the tables
 
 ```
 CREATE TABLE tasks (
-    id BIGINT AUTO_INCREMENT PRIMARY KEY,
-    created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    updated_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-    deleted_at DATETIME DEFAULT NULL,
+    id BIGSERIAL PRIMARY KEY,
+    created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    deleted_at TIMESTAMP DEFAULT NULL,
     title VARCHAR(255) NOT NULL,
     description TEXT,
     status VARCHAR(255) NOT NULL
